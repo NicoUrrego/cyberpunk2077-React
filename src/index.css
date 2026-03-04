@@ -1,0 +1,69 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: 'Rajdhani', 'Orbitron', system-ui, -apple-system, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #000000;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+  /* Custom properties for Cyberpunk theme */
+  --primary-yellow: #F7FF00;
+  --primary-black: #000000;
+  --text-white: #ffffff;
+  --overlay-dark: rgba(0, 0, 0, 0.9);
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #000000;
+  overflow-x: hidden;
+  position: relative;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(247, 255, 0, 0.5);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(247, 255, 0, 0.8);
+}
+
+/* Selection styling */
+::selection {
+  background-color: rgba(247, 255, 0, 0.3);
+  color: #ffffff;
+}
+
+::-moz-selection {
+  background-color: rgba(247, 255, 0, 0.3);
+  color: #ffffff;
+}
