@@ -10,10 +10,10 @@ function CyberSection() {
     const currentSection = cyberSectionData[activeTab];
 
     const tabs = [
-        { id: "historia", label: "Historia" },
-        { id: "nightcity", label: "Night City" },
-        { id: "jugabilidad", label: "Jugabilidad" },
-        { id: "phantomliberty", label: "Phantom Liberty" }
+        { id: "historia", label: "HISTORIA" },
+        { id: "nightcity", label: "NIGHT CITY" },
+        { id: "jugabilidad", label: "JUGABILIDAD" },
+        { id: "phantomliberty", label: "PHANTOM LIBERTY" }
     ];
 
     const changeTab = (tabId) => {
