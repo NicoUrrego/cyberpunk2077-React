@@ -1,4 +1,5 @@
 import './App.css'
+import Characters from "./components/Characters";
 import Header from './components/Header'
 import Footer from './components/Footer'
 import CyberSection from './components/CyberSection'
@@ -9,9 +10,11 @@ function App() {
   return (
     <div className="app">
       <Header />
-      <Footer />
+      <Characters />
       <CyberSection />
       <CyberpunkAnniversary />
+      <Multimedia />
+      <Footer />
       <AniversarioSection />
     </div>
   );
