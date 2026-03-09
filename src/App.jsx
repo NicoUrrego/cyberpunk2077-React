@@ -5,17 +5,18 @@ import Footer from './components/Footer'
 import CyberSection from './components/CyberSection'
 import CyberpunkAnniversary from './components/Juan' 
 import AniversarioSection from './components/AniversarioSection'
+import Multimedia from './components/Multimedia'
 
 function App() {
   return (
     <div className="app">
       <Header />
-      <Characters />
       <CyberSection />
       <CyberpunkAnniversary />
+      <AniversarioSection />
+      <Characters />
       <Multimedia />
       <Footer />
-      <AniversarioSection />
     </div>
   );
 }
