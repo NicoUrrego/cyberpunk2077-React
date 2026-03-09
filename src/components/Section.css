@@ -1,0 +1,240 @@
+/* ─────────────────────────────────────────
+   CONTENEDOR PRINCIPAL
+───────────────────────────────────────── */
+.container {
+    display: flex;
+    align-items: stretch;
+    background-color: #000;
+    width: 100%;
+    padding: 80px 40px 100px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+/* ─────────────────────────────────────────
+   MENÚ LATERAL IZQUIERDO
+───────────────────────────────────────── */
+#menu-container {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 490px;
+    min-width: 490px;
+    position: relative;
+    z-index: 2;
+}
+
+#menu-container li {
+    color: #fff;
+    cursor: pointer;
+    font-size: 21px;
+    font-weight:bold;
+    text-transform: uppercase;
+    padding: 0 8px 20px 0;
+    margin-bottom: 13px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+    line-height: 1.2;
+}
+
+#menu-container li::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: #fff;
+}
+
+#menu-container li.is-active {
+    color: #fcee0a;
+    padding-left: 20px;
+    cursor: default;
+    pointer-events: none;
+}
+
+#menu-container li.is-active::before {
+    content: '›';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #fcee0a;
+    font-size: 26px;
+    line-height: 1.2;
+}
+
+#menu-container li.is-active::after {
+    background: #fcee0a;
+}
+
+/* ─────────────────────────────────────────
+   SLIDE
+───────────────────────────────────────── */
+#slide {
+    flex: 1;
+    position: relative;       
+    display: flex;
+    justify-content: flex-end;
+    min-height: 568px;
+    overflow: hidden;
+}
+
+
+#slide > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% - 50px);
+    max-width: 1064px;
+    height: auto;
+    object-fit: cover;
+    object-position: left;
+    z-index: 0;               
+}
+
+/* ─────────────────────────────────────────
+   PANEL DERECHO — encima de la imagen
+───────────────────────────────────────── */
+.panel-derecho {
+    position: relative;
+    z-index: 1;             
+    width: 340px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 14px;
+    padding: 28px 20px 28px 36px;
+    background: linear-gradient(to right, transparent 0%, #000 28%);
+}
+
+.panel-derecho h2 {
+    color: #fff;
+    font-size: 21px;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.2;
+    margin: 0;
+}
+
+.panel-derecho p {
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.55;
+    margin: 0;
+    overflow-y: auto;
+    max-height: 240px;
+    scrollbar-width: thin;
+    scrollbar-color: #ffffff #111;
+}
+
+.panel-derecho p::-webkit-scrollbar { width: 4px; }
+.panel-derecho p::-webkit-scrollbar-thumb {
+    background: #fcee0a;
+    border-radius: 2px;
+}
+
+.panel-derecho .protocolo {
+    color: #fcee0a;
+    font-size: 10px;
+    opacity: 0.35;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+.panel-derecho a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 48px;
+    min-width: 200px;
+    max-width: 260px;
+    padding: 0 20px;
+    color: #fcee0a;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: #000;
+    border: 1.5px solid #fcee0a;
+    clip-path: polygon(12px 0%, 100% 0%, calc(100% - 12px) 100%, 0% 100%);
+    transition: background 0.2s, color 0.2s;
+    align-self: flex-start;
+}
+
+.panel-derecho a:hover {
+    background-color: #fcee0a;
+    color: #000;
+}
+/* ─────────────────────────────────────────
+   FLECHAS — solo mobile
+───────────────────────────────────────── */
+.swiper-button-prev,
+.swiper-button-next {
+    display: none;
+    color: #fcee0a;
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    z-index: 3;
+    font-size: 32px;
+    padding: 8px;
+    user-select: none;
+}
+
+.swiper-button-prev { left: 10px; }
+.swiper-button-next { right: 10px; }
+
+/* ─────────────────────────────────────────
+   MOBILE
+───────────────────────────────────────── */
+@media (max-width: 1024px) {
+
+    .container {
+        flex-direction: column;
+        padding: 0 0 80px;
+    }
+
+    #menu-container {
+        display: none;
+    }
+
+    #slide {
+        flex-direction: column;
+        min-height: unset;
+        overflow: visible;
+    }
+
+    /* en mobile la imagen vuelve al flujo normal */
+    #slide > img {
+        position: static;
+        width: 100%;
+        height: auto;
+    }
+
+    .panel-derecho {
+        width: 100%;
+        padding: 20px 24px;
+        background: #000;
+    }
+
+    .panel-derecho h2 { text-align: center; }
+    .panel-derecho p  { text-align: center; max-height: unset; }
+    .panel-derecho a  { align-self: center; }
+
+    .anniversary__pagination {
+        display: flex;
+        gap: 8px;
+        justify-content: center;
+        padding: 16px 0;
+        width: 100%;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

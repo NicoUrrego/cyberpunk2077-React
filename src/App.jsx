@@ -3,8 +3,7 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import CyberSection from './components/CyberSection'
 import CyberpunkAnniversary from './components/Juan' 
-import Multimedia from './components/Multimedia'
-
+import AniversarioSection from './components/AniversarioSection'
 
 function App() {
   return (
@@ -13,10 +12,9 @@ function App() {
       <Footer />
       <CyberSection />
       <CyberpunkAnniversary />
-      <Multimedia />
+      <AniversarioSection />
     </div>
-    
-  )
+  );
 }
 
 export default App
