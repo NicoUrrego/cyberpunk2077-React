@@ -16,8 +16,8 @@
 
 .tab{
     background:black;
-    color:white;
-    border:1px solid #ffd500;
+    color: #fcee0a;
+    border:1px solid #fcee0a;
     padding:12px 30px;
     font-weight:bold;
     cursor:pointer;
@@ -25,19 +25,19 @@
 }
 
 .tab.active{
-    background:#ffd500;
+    background:#fcee0a;
     color:black;
 }
 
 .tab:hover{
-    background:#ffd500;
+    background:#fcee0a;
     color:black;
 }
 
 /* CONTENIDO */
 
 .section{
-    background:#ffd500;
+    background:#fcee0a;
     display:flex;
     gap:40px;
     align-items:flex-start;
@@ -51,7 +51,7 @@
 
 .main-image{
     width:100%;
-    border:6px solid #ffd500;
+    border:6px solid #fcee0a;
 }
 
 /* INFO */
@@ -59,7 +59,7 @@
 .info{
     flex:1;
     color:black;
-    background:#ffd500;
+    background:#fcee0a;
     padding:35px;
 }
 
